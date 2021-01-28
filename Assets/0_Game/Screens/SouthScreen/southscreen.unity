@@ -459,7 +459,7 @@ GameObject:
   - component: {fileID: 1165107732}
   - component: {fileID: 1165107733}
   m_Layer: 0
-  m_Name: clue1_frequencyCOde
+  m_Name: clue1_frequencyCode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

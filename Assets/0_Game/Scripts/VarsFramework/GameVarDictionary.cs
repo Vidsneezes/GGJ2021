@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
+
 
 public class GameVarDictionary : MonoBehaviour
 {
@@ -25,7 +27,7 @@ public class GameVarDictionary : MonoBehaviour
                 runtimeVars = new Dictionary<string, int>();
                 for (int i = 0; i < refVariables.Count; i++)
                 {
-                    runtimeVars.Add(refVariables[i].name, refVariables[i].state);
+                    runtimeVars.Add(refVariables[i].name, refVariables[i].stateInternalNoRead);
                 }
             }
         }
@@ -83,5 +85,11 @@ public class GameVarDictionary : MonoBehaviour
         }
     }
 
+
+}
+
+
+public class CallbackInt: UnityEvent<int>
+{
 
 }

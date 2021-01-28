@@ -1,0 +1,31 @@
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.Events;
+
+public class CheckGameVariable : MonoBehaviour
+{
+    public GameVariable refVariable;
+
+    public int conditionNeed;
+
+    public UnityEvent onConditionMet;
+    public bool autoStart;
+
+    public void Awake()
+    {
+        if (autoStart)
+        {
+            TryCondition();
+        }
+    }
+
+    public void TryCondition()
+    {
+        if (refVariable.GetState() == conditionNeed)
+        {
+            onConditionMet.Invoke();
+        }
+    }
+
+
+}
