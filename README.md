@@ -1,3 +1,5 @@
+
+UNITY VERSION 2020.2.2f1
 Instructions
 
 The project contains the standard assets. 
