@@ -27,6 +27,8 @@ HOW TO USE VARIABLES:
    Use the Method 'Change State' to toggle the variable on and off
    Use 'Hide World Object' to deactive the gameobject with the toggle game variable Component
 
+Important: Don't rename/delete variables you didn't create
+
 Example Scene :
 
 Go to scene at "Assets/0_Game/Screens/SouthScreen/southscreen.unity"
