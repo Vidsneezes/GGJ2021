@@ -5,6 +5,8 @@ Instructions
 The project contains the standard assets. 
 Use the folder provided to add to the game 
 
+Game Build Auto resizes to 480 270
+
 Under 0_Game/Screens
 
   -North Screen
