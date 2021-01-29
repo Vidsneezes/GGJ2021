@@ -17,6 +17,8 @@ public class GameGlue : MonoBehaviour
     float inputDelay;
     private void Awake()
     {
+        Screen.SetResolution(480, 270, true);
+
         inputDelay = 0;
         activePair = null;
         StartCoroutine(StartLoad());
