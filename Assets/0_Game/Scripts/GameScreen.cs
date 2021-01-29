@@ -54,8 +54,6 @@ public class GameScreen : MonoBehaviour
             ruleObjects[i].gameObject.SetActive(false);
         }
 
-
-
     }
 
     public void Close()
@@ -87,6 +85,15 @@ public class GameScreen : MonoBehaviour
         for (int i = 0; i < ruleObjects.Count; i++)
         {
             ruleObjects[i].gameObject.SetActive(true);
+        }
+
+        for (int i = 0; i < ruleObjects.Count; i++)
+        {
+            CheckGameVariable chGame = ruleObjects[i].GetComponent<CheckGameVariable>();
+            if (chGame != null)
+            {
+                chGame.OnLookedAt();
+            }
         }
     }
 }
