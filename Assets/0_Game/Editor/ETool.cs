@@ -3,6 +3,7 @@ using UnityEditor;
 using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class ETool : Editor
 {
@@ -87,6 +88,53 @@ public class ETool : Editor
         {
             Debug.LogWarning("In Wrong Scene");
         }
+    }
+
+
+    [MenuItem("Tool/Update Prefabs")]
+
+    static void UpdatePrefabs()
+    {
+        string fbxPath = "Assets/0_Game/AssetImport";
+        string piecesPath = "Assets/0_Game/Prefabs/Pieces";
+
+        string[] val = AssetDatabase.FindAssets("l:fbx", new[] { fbxPath });
+
+        //val = HighestVersion(val)
+       
+        for (int i = 0; i < val.Length; i++)
+        {
+            GameObject modelImp = (GameObject)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(val[i]), typeof(GameObject));
+
+            Debug.Log(modelImp.name);
+            string prefabName = modelImp.name;
+            string[] split = modelImp.name.Split('_');
+            if (split.Length == 3)
+            {
+                prefabName = $"piece_{split[1]}_0";
+            }
+            else if (split.Length == 4)
+            {
+
+            }
+
+            GameObject prefabCreated = GameObject.Instantiate(modelImp);
+            prefabCreated.name = prefabName;
+            EditorUtility.DisplayProgressBar("Generating", $"Object {prefabName}", (float)i / (float)val.Length);
+
+            PrefabUtility.SaveAsPrefabAsset(prefabCreated, $"{piecesPath}/{prefabCreated.name}.prefab");
+            GameObject.DestroyImmediate(prefabCreated);
+
+            EditorUtility.ClearProgressBar();
+        }
+       
+
+        return;
+    }
+
+    public string[] HighestVersion(string[] all)
+    {
+        return null;
     }
 
 }
