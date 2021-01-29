@@ -12,7 +12,7 @@ public class CheckGameVariable : MonoBehaviour
     public UnityEvent onConditionMet;
     public bool autoStart;
 
-    public void Awake()
+    public void OnLookedAt()
     {
         if (autoStart)
         {
