@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/0_Game/Screens/WestScreen/westscreen.unity
     guid: f718c1d5a67143548a2f57aef0fb6e77
+  - enabled: 1
+    path: Assets/0_Game/Screens/SouthScreen_UnderBed/southscreen_underbed.unity
+    guid: 0f6d71adc2e980d43b29483ccaa0a4e6
   m_configObjects: {}

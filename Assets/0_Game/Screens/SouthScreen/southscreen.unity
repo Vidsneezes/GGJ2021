@@ -254,8 +254,9 @@ MonoBehaviour:
   leftScreenNumber: 0
   rightScreenNumber: 3
   ruleObjects:
-  - {fileID: 430260074}
+  - {fileID: 1040211167}
   - {fileID: 1165107727}
+  audioLs: {fileID: 0}
 --- !u!4 &232117092
 Transform:
   m_ObjectHideFlags: 0
@@ -269,7 +270,7 @@ Transform:
   m_Children:
   - {fileID: 303979531}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &303979526
 GameObject:
@@ -404,7 +405,7 @@ Transform:
   m_Father: {fileID: 232117092}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 9.22, y: 180, z: 0}
---- !u!1 &430260074
+--- !u!1 &1040211167
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -412,8 +413,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 430260076}
-  - component: {fileID: 430260075}
+  - component: {fileID: 1040211169}
+  - component: {fileID: 1040211168}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: rule
@@ -421,18 +422,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!108 &430260075
+--- !u!108 &1040211168
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430260074}
+  m_GameObject: {fileID: 1040211167}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.54147387, g: 0.620406, b: 0.9811321, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
@@ -483,19 +484,19 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!4 &430260076
+--- !u!4 &1040211169
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430260074}
+  m_GameObject: {fileID: 1040211167}
   m_LocalRotation: {x: 0.05683221, y: 0.7048192, z: -0.05683221, w: 0.7048192}
   m_LocalPosition: {x: 0.77, y: 1, z: 0.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 9.22, y: 90, z: 0}
 --- !u!1 &1165107727
 GameObject:
@@ -512,7 +513,7 @@ GameObject:
   - component: {fileID: 1165107732}
   - component: {fileID: 1165107733}
   m_Layer: 0
-  m_Name: clue1_frequencyCode
+  m_Name: goto_underbed
   m_TagString: rule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -550,7 +551,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4e8530343d32ee44bafb9ed779a7a9e4, type: 2}
+  - {fileID: 2100000, guid: d9f2c2db6f5820f45b0c469d7b9f627e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -587,9 +588,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165107727}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.695, y: 0.269, z: -0.215}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.6315155, y: 0.15238953, z: -0.21500015}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -606,8 +607,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf07d162875bd3499924dce06112e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refVariable: {fileID: 11400000, guid: f1eb87b6439e09345a7e5e98d7e15c2c, type: 2}
-  getMessage: Maybe this will be useful
+  refVariable: {fileID: 11400000, guid: 17bb93969b801da48b027c97e2971256, type: 2}
+  value: 5
+  getMessage: 
 --- !u!114 &1165107733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,18 +630,6 @@ MonoBehaviour:
         - m_Target: {fileID: 1165107732}
           m_TargetAssemblyTypeName: ToggleGameVariable, Assembly-CSharp
           m_MethodName: ChangeState
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1165107732}
-          m_TargetAssemblyTypeName: ToggleGameVariable, Assembly-CSharp
-          m_MethodName: HideWorldObject
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
