@@ -33,6 +33,14 @@ public class ToggleGameVariable : MonoBehaviour
         }
     }
 
+    public void JustMessage()
+    {
+        if (getMessage.Length > 0)
+        {
+            GameGlue.TryShowMessage(getMessage);
+        }
+    }
+
     public void HideWorldObject()
     {
         gameObject.SetActive(false);

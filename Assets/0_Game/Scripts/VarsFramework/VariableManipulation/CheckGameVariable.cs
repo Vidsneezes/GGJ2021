@@ -10,6 +10,8 @@ public class CheckGameVariable : MonoBehaviour
     public int conditionNeed;
 
     public UnityEvent onConditionMet;
+    public UnityEvent onConditionFailed;
+
     public bool autoStart;
 
     public void OnLookedAt()
@@ -28,6 +30,7 @@ public class CheckGameVariable : MonoBehaviour
         }
         else
         {
+            onConditionFailed.Invoke();
             if (failedMessage.Length > 0)
             {
                 GameGlue.TryShowMessage(failedMessage);
