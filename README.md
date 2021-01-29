@@ -40,3 +40,6 @@ the Toggle Game Variable, in its reference it has 'gotFrequency'
 
 How you develop the logic depends on you, but the game variables will be used to know what point of the game
 the player is in. 
+
+When updating a game screen, tag the gameobjects you want to appear in the scene with "rule"
+then hit the menu item Tools/Screenify
