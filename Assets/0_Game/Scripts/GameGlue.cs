@@ -24,8 +24,11 @@ public class GameGlue : MonoBehaviour
     {
         LoadGame();
         yield return new WaitForSeconds(5f/60f);
-        LookAtScreen(0);
+        
+        currentScreen.onStateChange.AddListener(LookAtScreen);
+
         canMove.ChangeCustom(1);
+        currentScreen.ChangeCustom(0);
     }
 
     void LoadGame()
@@ -35,8 +38,6 @@ public class GameGlue : MonoBehaviour
             SceneManager.LoadScene(screens[i].sceneName, LoadSceneMode.Additive);
         }
     }
-
-
 
     private void Update()
     {
@@ -49,11 +50,11 @@ public class GameGlue : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.D))
             {
-                LookAtScreen(activePair.gameScreen.rightScreenNumber);
+                currentScreen.ChangeCustom(activePair.gameScreen.rightScreenNumber);
             }
             else if (Input.GetKeyDown(KeyCode.A))
             {
-                LookAtScreen(activePair.gameScreen.leftScreenNumber);
+                currentScreen.ChangeCustom(activePair.gameScreen.leftScreenNumber);
             }
         }
     }
@@ -85,6 +86,7 @@ public class GameGlue : MonoBehaviour
        
     }
 
+
     public void LookAtScreen(int number)
     {
         int prev = currentScreen.GetState();
@@ -100,6 +102,9 @@ public class GameGlue : MonoBehaviour
                 return;
             }
         }
+
+        Debug.LogWarning("DID NOT FIND SCREEN : " + number);
+        currentScreen.ChangeCustom(prev);
     }
 
     public void ShowMessage(string message)
