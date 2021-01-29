@@ -2,6 +2,7 @@
 using UnityEditor;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class ETool : Editor
 {
@@ -51,6 +52,41 @@ public class ETool : Editor
         Undo.RecordObject(gameScreen, "Updated Game Screen");
         EditorUtility.SetDirty(gameScreen);
 
+    }
+
+    [MenuItem("Tool/BuildVariables")]
+
+    static void BuildVariables()
+    {
+        if (SceneManager.GetActiveScene().name == "GameGlue")
+        {
+            string core = "Assets/0_Game/GameVariables/CoreLoop";
+            string system = "Assets/0_Game/GameVariables/System";
+
+            string[] val = AssetDatabase.FindAssets("l:GameVariable", new[] { core, system });
+
+            GameVarDictionary varDict = GameObject.FindObjectOfType<GameVarDictionary>();
+
+            varDict.refVariables = new System.Collections.Generic.List<GameVariable>();
+            EditorUtility.DisplayProgressBar("Building Indexes", "wait", 0.3f);
+
+            foreach (string guid2 in val)
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guid2);
+                GameVariable var = AssetDatabase.LoadAssetAtPath<GameVariable>(path);
+                varDict.refVariables.Add(var);
+            }
+            EditorUtility.ClearProgressBar();
+
+            EditorUtility.SetDirty(varDict);
+            Undo.RecordObject(varDict, "Added game variables");
+
+            UnityEditor.SceneManagement.EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
+        }
+        else
+        {
+            Debug.LogWarning("In Wrong Scene");
+        }
     }
 
 }

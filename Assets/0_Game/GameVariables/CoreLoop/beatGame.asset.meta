@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: de541aaf569c37c428270d3f5b4f1a5f
+labels:
+- GameVariable
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
