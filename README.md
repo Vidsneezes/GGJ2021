@@ -38,6 +38,11 @@ This one has 'gotFrequency' in the variable list.
 Next go to the "clue1_frequencyCode" game object scroll its components until you find
 the Toggle Game Variable, in its reference it has 'gotFrequency'
 
+When adding a Game Variable you must also label it with a 'GameVariable' Label found at the lower right corner of the inspector 
+when you click on a game variable asset.
+
+Beforing testin make sure to build the variables via the menu item Tool/Build Variables while in the GameGlue scene
+
 How you develop the logic depends on you, but the game variables will be used to know what point of the game
 the player is in. 
 
