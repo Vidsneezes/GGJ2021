@@ -12,10 +12,12 @@ public class GameGlue : MonoBehaviour
     public List<ScreenPair> screens;
     [HideInInspector]
     public ScreenPair activePair;
-   
 
+
+    float inputDelay;
     private void Awake()
     {
+        inputDelay = 0;
         activePair = null;
         StartCoroutine(StartLoad());
     }
@@ -24,7 +26,8 @@ public class GameGlue : MonoBehaviour
     {
         LoadGame();
         yield return new WaitForSeconds(5f/60f);
-        
+
+        currentScreen.onStateChange = new CallbackInt();
         currentScreen.onStateChange.AddListener(LookAtScreen);
 
         canMove.ChangeCustom(1);
@@ -46,15 +49,25 @@ public class GameGlue : MonoBehaviour
             GameVarDictionary.dictionaryInstance.DebugMenu();
         }
 
-        if (canMove.GetState() == 1)
+        inputDelay = Mathf.Clamp(inputDelay - Time.deltaTime, -1,99);
+
+        if (canMove.GetState() == 1 && inputDelay < 0)
         {
             if (Input.GetKeyDown(KeyCode.D))
             {
-                currentScreen.ChangeCustom(activePair.gameScreen.rightScreenNumber);
+                if (activePair.gameScreen.rightScreenNumber >= 0)
+                {
+                    inputDelay = 12f / 60f;
+                    currentScreen.ChangeCustom(activePair.gameScreen.rightScreenNumber);
+                }
             }
             else if (Input.GetKeyDown(KeyCode.A))
             {
-                currentScreen.ChangeCustom(activePair.gameScreen.leftScreenNumber);
+                if (activePair.gameScreen.leftScreenNumber >= 0)
+                {
+                    inputDelay = 12f / 60f;
+                    currentScreen.ChangeCustom(activePair.gameScreen.leftScreenNumber);
+                }
             }
         }
     }
@@ -97,14 +110,13 @@ public class GameGlue : MonoBehaviour
             {
                 ClosePreviousScreen(prev);
                 screens[i].gameScreen.LookAtScreen();
-                currentScreen.ChangeCustom(0);
                 activePair = screens[i];
                 return;
             }
         }
 
         Debug.LogWarning("DID NOT FIND SCREEN : " + number);
-        currentScreen.ChangeCustom(prev);
+        //currentScreen.ChangeCustom(prev);
     }
 
     public void ShowMessage(string message)
