@@ -5,7 +5,6 @@ using UnityEngine.Events;
 public class CheckGameVariable : MonoBehaviour
 {
     public GameVariable refVariable;
-    public string succeedMessage;
     public string failedMessage;
 
     public int conditionNeed;
@@ -29,7 +28,10 @@ public class CheckGameVariable : MonoBehaviour
         }
         else
         {
-
+            if (failedMessage.Length > 0)
+            {
+                GameGlue.TryShowMessage(failedMessage);
+            }
         }
     }
 

@@ -542,6 +542,8 @@ MonoBehaviour:
   gameVariables: {fileID: 1358618576}
   eventSystem: {fileID: 752758367}
   sceneName: eastscreen
+  leftScreenNumber: 1
+  rightScreenNumber: 2
   ruleObjects:
   - {fileID: 910197930}
   - {fileID: 1555756521}

@@ -710,12 +710,15 @@ MonoBehaviour:
   gameVariables: {fileID: 2011611568}
   eventSystem: {fileID: 1723713788}
   sceneName: northscreen
+  leftScreenNumber: 3
+  rightScreenNumber: 0
   ruleObjects:
   - {fileID: 1015890714}
   - {fileID: 27088528}
   - {fileID: 717747136}
   - {fileID: 1375951910}
   - {fileID: 2132191695}
+  audioLs: {fileID: 0}
 --- !u!4 &742923713
 Transform:
   m_ObjectHideFlags: 0
@@ -743,7 +746,6 @@ GameObject:
   - component: {fileID: 1015890719}
   - component: {fileID: 1015890718}
   - component: {fileID: 1015890717}
-  - component: {fileID: 1015890716}
   - component: {fileID: 1015890715}
   m_Layer: 0
   m_Name: clue4_beatgamegetcode
@@ -781,20 +783,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &1015890716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015890714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baf07d162875bd3499924dce06112e83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  refVariable: {fileID: 11400000, guid: f1eb87b6439e09345a7e5e98d7e15c2c, type: 2}
-  getMessage: 
 --- !u!65 &1015890717
 BoxCollider:
   m_ObjectHideFlags: 0

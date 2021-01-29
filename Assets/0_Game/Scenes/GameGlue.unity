@@ -350,6 +350,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1487185749340405112, guid: 25badeb0c03f5844f8983e3979b7f3e1, type: 3}
+      propertyPath: refVariables.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487185749340405112, guid: 25badeb0c03f5844f8983e3979b7f3e1, type: 3}
+      propertyPath: refVariables.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 17bb93969b801da48b027c97e2971256, type: 2}
+    - target: {fileID: 1487185749340405112, guid: 25badeb0c03f5844f8983e3979b7f3e1, type: 3}
+      propertyPath: refVariables.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8fd35810e5e9dea40a2c591206e83061, type: 2}
     - target: {fileID: 1487185749340405113, guid: 25badeb0c03f5844f8983e3979b7f3e1, type: 3}
       propertyPath: m_Name
       value: GameVariables

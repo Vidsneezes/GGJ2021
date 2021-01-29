@@ -251,6 +251,8 @@ MonoBehaviour:
   gameVariables: {fileID: 1377336602}
   eventSystem: {fileID: 2067600964}
   sceneName: southscreen
+  leftScreenNumber: 0
+  rightScreenNumber: 3
   ruleObjects:
   - {fileID: 430260074}
   - {fileID: 1165107727}

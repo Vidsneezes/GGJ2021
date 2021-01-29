@@ -20,11 +20,7 @@ public class ToggleGameVariable : MonoBehaviour
 
         if(getMessage.Length > 0)
         {
-            GameGlue gameGlue = GameObject.FindObjectOfType<GameGlue>();
-            if(gameGlue != null)
-            {
-                gameGlue.ShowMessage(getMessage);
-            }
+            GameGlue.TryShowMessage(getMessage);
         }
     }
 

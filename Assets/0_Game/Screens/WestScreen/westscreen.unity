@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf07d162875bd3499924dce06112e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refVariable: {fileID: 11400000, guid: 11b469f5ded81d04699925df812cb8a2, type: 2}
+  refVariable: {fileID: 11400000, guid: ee55446e9c43f034f8d55db840d7387c, type: 2}
   getMessage: I think I have this one
 --- !u!4 &61811278
 Transform:
@@ -551,11 +551,14 @@ MonoBehaviour:
   gameVariables: {fileID: 1546711}
   eventSystem: {fileID: 1511695084}
   sceneName: westscreen
+  leftScreenNumber: 2
+  rightScreenNumber: 1
   ruleObjects:
   - {fileID: 895602163}
   - {fileID: 1254017900}
   - {fileID: 367642456}
   - {fileID: 61811276}
+  audioLs: {fileID: 0}
 --- !u!4 &643094297
 Transform:
   m_ObjectHideFlags: 0

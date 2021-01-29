@@ -11,7 +11,13 @@ public class GameScreen : MonoBehaviour
     public EventSystem eventSystem;
     public string sceneName;
 
+    public int leftScreenNumber;
+    public int rightScreenNumber;
+
     public List<GameObject> ruleObjects;
+
+    [HideInInspector]
+    public AudioListener audioLs;
 
     private void Awake()
     {
@@ -37,16 +43,46 @@ public class GameScreen : MonoBehaviour
 
         viewCamera.gameObject.SetActive(false);
 
+        audioLs = viewCamera.GetComponent<AudioListener>();
+        if(audioLs != null)
+        {
+            audioLs.enabled = false;
+        }
+
         for (int i = 0; i < ruleObjects.Count; i++)
         {
             ruleObjects[i].gameObject.SetActive(false);
         }
 
+
+
+    }
+
+    public void Close()
+    {
+        viewCamera.gameObject.SetActive(false);
+
+        audioLs = viewCamera.GetComponent<AudioListener>();
+        if (audioLs != null)
+        {
+            audioLs.enabled = false;
+        }
+
+        for (int i = 0; i < ruleObjects.Count; i++)
+        {
+            ruleObjects[i].gameObject.SetActive(false);
+        }
     }
 
     public void LookAtScreen()
     {
         viewCamera.gameObject.SetActive(true);
+
+        audioLs = viewCamera.GetComponent<AudioListener>();
+        if (audioLs != null)
+        {
+            audioLs.enabled = true;
+        }
 
         for (int i = 0; i < ruleObjects.Count; i++)
         {

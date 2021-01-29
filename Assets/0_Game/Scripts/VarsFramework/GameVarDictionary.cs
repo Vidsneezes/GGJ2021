@@ -14,7 +14,7 @@ public class GameVarDictionary : MonoBehaviour
     [HideInInspector]
     public bool init = false;
 
-    bool showDebug;
+    bool showDebug = false;
 
     public void Fill()
     {
@@ -39,9 +39,9 @@ public class GameVarDictionary : MonoBehaviour
         Fill();
     }
 
-    private void Update()
+    public void DebugMenu()
     {
-        if(Input.GetKeyDown(KeyCode.Tilde))
+        if(Input.GetKeyDown(KeyCode.Tab))
         {
             showDebug = !showDebug;
         }
@@ -49,7 +49,7 @@ public class GameVarDictionary : MonoBehaviour
 
     private void OnGUI()
     {
-        if (GameVarDictionary.dictionaryInstance == this)
+        if (GameVarDictionary.dictionaryInstance.showDebug && GameVarDictionary.dictionaryInstance == this)
         {
             foreach (var item in runtimeVars)
             {
