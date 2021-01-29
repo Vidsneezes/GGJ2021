@@ -17,6 +17,15 @@ public class ToggleGameVariable : MonoBehaviour
         {
             refVariable.TurnOff();
         }
+
+        if(getMessage.Length > 0)
+        {
+            GameGlue gameGlue = GameObject.FindObjectOfType<GameGlue>();
+            if(gameGlue != null)
+            {
+                gameGlue.ShowMessage(getMessage);
+            }
+        }
     }
 
     public void HideWorldObject()

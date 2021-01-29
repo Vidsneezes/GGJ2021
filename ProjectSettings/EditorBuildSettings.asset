@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Prototype/scenes/prototype_needsrev.unity
-    guid: 11e2d3f8572cfa445adfec48a9a7863b
+    path: Assets/0_Game/Scenes/GameGlue.unity
+    guid: 699c5b642f45b014e993fb8814541cdc
+  - enabled: 1
+    path: Assets/0_Game/Screens/SouthScreen/southscreen.unity
+    guid: 059f0a2c56180b740adfb84972753bb0
+  - enabled: 1
+    path: Assets/0_Game/Screens/EastScreen/eastscreen.unity
+    guid: d8fe8323cdb576248a4b5b9c389cb344
+  - enabled: 1
+    path: Assets/0_Game/Screens/NorthScreen/northscreen.unity
+    guid: 89afaef0f9cf0d24693ef59025d45890
+  - enabled: 1
+    path: Assets/0_Game/Screens/WestScreen/westscreen.unity
+    guid: f718c1d5a67143548a2f57aef0fb6e77
   m_configObjects: {}

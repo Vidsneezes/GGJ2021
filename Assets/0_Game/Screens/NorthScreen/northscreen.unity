@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 27088529}
   m_Layer: 0
   m_Name: RuleCheck
-  m_TagString: Untagged
+  m_TagString: rule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,7 +305,7 @@ Transform:
   m_LocalScale: {x: 1.13, y: 0.95, z: 0.51}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &570422232
 GameObject:
@@ -433,12 +433,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570422232}
-  m_LocalRotation: {x: 0.08037288, y: 0, z: 0, w: 0.9967649}
+  m_LocalRotation: {x: 0.08037288, y: -0, z: -0, w: 0.9967649}
   m_LocalPosition: {x: 0.77, y: 1, z: 0.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 742923713}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 9.22, y: 0, z: 0}
 --- !u!1 &573031879
 GameObject:
@@ -533,7 +533,7 @@ Transform:
   m_LocalScale: {x: 0.45, y: 0.2, z: 0.405}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611772834
 GameObject:
@@ -615,7 +615,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &717747136
 GameObject:
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 717747138}
   m_Layer: 0
   m_Name: ToggleBeatGame
-  m_TagString: Untagged
+  m_TagString: rule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -677,6 +677,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refVariable: {fileID: 11400000, guid: de541aaf569c37c428270d3f5b4f1a5f, type: 2}
   getMessage: That was easy.
+--- !u!1 &742923711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 742923713}
+  - component: {fileID: 742923712}
+  m_Layer: 0
+  m_Name: '##GAME SCREEN##'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &742923712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742923711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff19520c38ec9184a8a463f12523bdfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewCamera: {fileID: 570422236}
+  gameVariables: {fileID: 2011611568}
+  eventSystem: {fileID: 1723713788}
+  sceneName: northscreen
+  ruleObjects:
+  - {fileID: 1015890714}
+  - {fileID: 27088528}
+  - {fileID: 717747136}
+  - {fileID: 1375951910}
+  - {fileID: 2132191695}
+--- !u!4 &742923713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742923711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 570422237}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1015890714
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +747,7 @@ GameObject:
   - component: {fileID: 1015890715}
   m_Layer: 0
   m_Name: clue4_beatgamegetcode
-  m_TagString: Untagged
+  m_TagString: rule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -816,7 +870,7 @@ Transform:
   m_Children:
   - {fileID: 27088530}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1184028380
 GameObject:
@@ -911,7 +965,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.95, z: 0.51}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1375951910
 GameObject:
@@ -926,7 +980,7 @@ GameObject:
   - component: {fileID: 1375951912}
   m_Layer: 0
   m_Name: ToggleItemMessage
-  m_TagString: Untagged
+  m_TagString: rule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1037,7 +1091,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2011611567
 GameObject:
@@ -1097,7 +1151,7 @@ GameObject:
   - component: {fileID: 2132191696}
   m_Layer: 0
   m_Name: Spot Light
-  m_TagString: Untagged
+  m_TagString: rule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1176,5 +1230,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 9.22, y: 90, z: 0}

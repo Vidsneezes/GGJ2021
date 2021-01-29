@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 61811277}
   m_Layer: 0
   m_Name: LearnAboutAd
-  m_TagString: Untagged
+  m_TagString: rule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 367642457}
   m_Layer: 0
   m_Name: RuleCheck
-  m_TagString: Untagged
+  m_TagString: rule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,8 +420,8 @@ Transform:
   m_LocalPosition: {x: 0.77, y: 1, z: 0.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 643094297}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 9.22, y: 270, z: 0}
 --- !u!1 &437156040
 GameObject:
@@ -516,7 +516,60 @@ Transform:
   m_LocalScale: {x: 0.35, y: 0.8, z: 0.52}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &643094295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 643094297}
+  - component: {fileID: 643094296}
+  m_Layer: 0
+  m_Name: '##GAME SCREEN##'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &643094296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643094295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff19520c38ec9184a8a463f12523bdfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewCamera: {fileID: 390870552}
+  gameVariables: {fileID: 1546711}
+  eventSystem: {fileID: 1511695084}
+  sceneName: westscreen
+  ruleObjects:
+  - {fileID: 895602163}
+  - {fileID: 1254017900}
+  - {fileID: 367642456}
+  - {fileID: 61811276}
+--- !u!4 &643094297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643094295}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 390870553}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &895602163
 GameObject:
@@ -530,7 +583,7 @@ GameObject:
   - component: {fileID: 895602164}
   m_Layer: 0
   m_Name: Spot Light
-  m_TagString: Untagged
+  m_TagString: rule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -609,7 +662,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 9.22, y: 90, z: 0}
 --- !u!1 &1254017900
 GameObject:
@@ -626,7 +679,7 @@ GameObject:
   - component: {fileID: 1254017901}
   m_Layer: 0
   m_Name: clue2_radioListen
-  m_TagString: Untagged
+  m_TagString: rule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -735,7 +788,7 @@ Transform:
   m_Children:
   - {fileID: 367642458}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1354468268
 GameObject:
@@ -830,7 +883,7 @@ Transform:
   m_LocalScale: {x: 0.153, y: 0.285, z: 0.405}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1511695082
 GameObject:
@@ -896,7 +949,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1812489596
 GameObject:
@@ -978,7 +1031,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1828986664
 GameObject:
@@ -1073,5 +1126,5 @@ Transform:
   m_LocalScale: {x: 0.35, y: 1.1, z: 0.85}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
