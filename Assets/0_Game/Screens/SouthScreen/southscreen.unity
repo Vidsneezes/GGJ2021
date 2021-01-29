@@ -442,7 +442,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 9.22, y: 90, z: 0}
 --- !u!1 &1165107727
 GameObject:
@@ -535,11 +535,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165107727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.695, y: 0.173, z: -0.203}
+  m_LocalPosition: {x: 0.695, y: 0.269, z: -0.215}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1165107732
 MonoBehaviour:
@@ -554,6 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refVariable: {fileID: 11400000, guid: f1eb87b6439e09345a7e5e98d7e15c2c, type: 2}
+  getMessage: Maybe this will be useful
 --- !u!114 &1165107733
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class ToggleGameVariable : MonoBehaviour
 {
     public GameVariable refVariable;
+    public string getMessage;
 
     public void ChangeState()
     {
