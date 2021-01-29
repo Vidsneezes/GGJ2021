@@ -251,8 +251,8 @@ MonoBehaviour:
   gameVariables: {fileID: 1377336602}
   eventSystem: {fileID: 2067600964}
   sceneName: southscreen_underbed
-  leftScreenNumber: 0
-  rightScreenNumber: 3
+  leftScreenNumber: 2
+  rightScreenNumber: 2
   ruleObjects:
   - {fileID: 340812663}
   - {fileID: 1186604526}
@@ -1101,6 +1101,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onConditionFailed:
+    m_PersistentCalls:
+      m_Calls: []
   autoStart: 1
 --- !u!4 &1186604528
 Transform:
