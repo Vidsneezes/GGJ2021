@@ -138,6 +138,52 @@ MonoBehaviour:
   screenNumber: 2
   sceneName: southscreen
   gameScreen: {fileID: 0}
+--- !u!1 &1035744791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1035744793}
+  - component: {fileID: 1035744792}
+  m_Layer: 0
+  m_Name: 98_End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1035744793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035744791}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 638645113548304613}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1035744792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035744791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c514507789ae3442a4068ca38ab97f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenNumber: 98
+  sceneName: End
+  gameScreen: {fileID: 0}
 --- !u!1 &1844112250
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +360,7 @@ Transform:
   - {fileID: 3667668831643258142}
   - {fileID: 8290471013223136503}
   - {fileID: 7341369551142373595}
+  - {fileID: 1035744793}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -329,6 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe2ee1bb67ebcb64fabe47318f28a9ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startScene: 99
   prefab_messagePrompt: {fileID: 9185238026715810572, guid: 9f0de1eb63867e0489176cbce8514c87, type: 3}
   currentScreen: {fileID: 11400000, guid: 17bb93969b801da48b027c97e2971256, type: 2}
   canMove: {fileID: 11400000, guid: 8fd35810e5e9dea40a2c591206e83061, type: 2}
@@ -343,6 +391,7 @@ MonoBehaviour:
   - {fileID: 2671845997764221601}
   - {fileID: 5254390919999805542}
   - {fileID: 1417950714301677196}
+  - {fileID: 1035744792}
   activePair: {fileID: 0}
 --- !u!1 &6272584240162281312
 GameObject:
