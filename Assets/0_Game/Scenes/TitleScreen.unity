@@ -816,6 +816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51a0c92273941d4db89f0e2fecd8454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoStart: 1
   time: 1.1
   onTimerTock:
     m_PersistentCalls:

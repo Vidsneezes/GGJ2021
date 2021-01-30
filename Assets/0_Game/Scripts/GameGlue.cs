@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameGlue : MonoBehaviour
 {
+    public int startScene = 99;
+
     public MessagePrompt prefab_messagePrompt;
     public GameVariable currentScreen;
     public GameVariable canMove;
@@ -33,7 +35,7 @@ public class GameGlue : MonoBehaviour
         currentScreen.onStateChange.AddListener(LookAtScreen);
 
         canMove.ChangeCustom(1);
-        currentScreen.ChangeCustom(0);
+        currentScreen.ChangeCustom(startScene);
     }
 
     void LoadGame()
