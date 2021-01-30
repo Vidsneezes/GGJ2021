@@ -667,6 +667,7 @@ MonoBehaviour:
   leftScreenNumber: 1
   rightScreenNumber: 2
   ruleObjects:
+  - {fileID: 5540704075252388587}
   - {fileID: 2252065882399194183}
   - {fileID: 2252065882399194182}
   - {fileID: 2252065882399194181}
@@ -679,6 +680,7 @@ MonoBehaviour:
   - {fileID: 1726108272}
   - {fileID: 2252065882399194185}
   - {fileID: 2252065882399194184}
+  - {fileID: 74433020}
   - {fileID: 15235665}
   - {fileID: 746083107}
   - {fileID: 1115259239}
@@ -689,8 +691,6 @@ MonoBehaviour:
   - {fileID: 1483680070}
   - {fileID: 1777411729}
   - {fileID: 1832731482}
-  - {fileID: 5540704075252388587}
-  - {fileID: 74433020}
   audioLs: {fileID: 0}
 --- !u!4 &686391630
 Transform:
@@ -1710,7 +1710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832731482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0.87, z: -0.932}
+  m_LocalPosition: {x: 0.139, y: 0.87, z: -0.932}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
