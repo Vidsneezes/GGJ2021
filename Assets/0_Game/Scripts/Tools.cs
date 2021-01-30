@@ -10,4 +10,14 @@ public class Tools : MonoBehaviour
         SceneManager.LoadScene(destination);
     }
 
+    public void QuiGame()
+    {
+        Application.Quit();
+    }
+
+    public void DestroyObject(GameObject objm)
+    {
+        GameObject.Destroy(objm);
+    }
+
 }

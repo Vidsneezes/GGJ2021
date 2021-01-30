@@ -377,6 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startScene: 99
+  prefab_gameMenu: {fileID: 9085095973633826736, guid: b2f03a286d969db41861adc6f5cd5fed, type: 3}
   prefab_messagePrompt: {fileID: 9185238026715810572, guid: 9f0de1eb63867e0489176cbce8514c87, type: 3}
   currentScreen: {fileID: 11400000, guid: 17bb93969b801da48b027c97e2971256, type: 2}
   canMove: {fileID: 11400000, guid: 8fd35810e5e9dea40a2c591206e83061, type: 2}
