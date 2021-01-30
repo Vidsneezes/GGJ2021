@@ -50,7 +50,7 @@ public class GameGlue : MonoBehaviour
 
     private void Update()
     {
-        bool toggleMenu = (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        bool toggleMenu = (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P));
 
         if (gameMenu == null && toggleMenu)
         {
