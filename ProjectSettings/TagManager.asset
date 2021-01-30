@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - rule
+  - remove
   layers:
   - Default
   - TransparentFX
