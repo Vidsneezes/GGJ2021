@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/0_Game/Screens/EastScreen_gamebox/eastscreen_gamebox.unity
     guid: 8a887df0a72ef0e48bae714a14f13689
   - enabled: 1
+    path: Assets/0_Game/Screens/SouthScreen_UnderBed_o1/southscreen_underbed_o1.unity
+    guid: fbaaec57541c4314caf99ecf390dd83d
+  - enabled: 1
     path: Assets/0_Game/Screens/End/End.unity
     guid: 92cf7d287a00296429e69031fffca212
   - enabled: 1

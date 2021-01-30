@@ -184,6 +184,52 @@ MonoBehaviour:
   screenNumber: 98
   sceneName: End
   gameScreen: {fileID: 0}
+--- !u!1 &1491318215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491318216}
+  - component: {fileID: 1491318217}
+  m_Layer: 0
+  m_Name: 50_south_underbed_o1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1491318216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491318215}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 638645113548304613}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1491318217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491318215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c514507789ae3442a4068ca38ab97f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenNumber: 50
+  sceneName: southscreen_underbed_o1
+  gameScreen: {fileID: 0}
 --- !u!1 &1844112250
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +407,7 @@ Transform:
   - {fileID: 8290471013223136503}
   - {fileID: 7341369551142373595}
   - {fileID: 1035744793}
+  - {fileID: 1491318216}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -395,6 +442,7 @@ MonoBehaviour:
   - {fileID: 5254390919999805542}
   - {fileID: 1417950714301677196}
   - {fileID: 1035744792}
+  - {fileID: 1491318217}
   activePair: {fileID: 0}
 --- !u!1 &6272584240162281312
 GameObject:
