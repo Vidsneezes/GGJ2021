@@ -7,6 +7,7 @@ public class ToggleGameVariable : MonoBehaviour
     public GameVariable refVariable;
     public int value = -1;
     public string getMessage;
+    public float messageWait = 1;
 
     public void ChangeState()
     {
@@ -29,7 +30,7 @@ public class ToggleGameVariable : MonoBehaviour
 
         if(getMessage.Length > 0)
         {
-            GameGlue.TryShowMessage(getMessage);
+            GameGlue.TryShowMessage(getMessage,messageWait);
         }
     }
 
@@ -37,12 +38,13 @@ public class ToggleGameVariable : MonoBehaviour
     {
         if (getMessage.Length > 0)
         {
-            GameGlue.TryShowMessage(getMessage);
+            GameGlue.TryShowMessage(getMessage,messageWait);
         }
     }
 
     public void HideWorldObject()
     {
+        GameGlue.IdleCursor();
         gameObject.SetActive(false);
     }
 

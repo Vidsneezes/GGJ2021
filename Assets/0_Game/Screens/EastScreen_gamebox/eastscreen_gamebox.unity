@@ -664,7 +664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refVariable: {fileID: 11400000, guid: 11b469f5ded81d04699925df812cb8a2, type: 2}
-  value: -1
+  value: 1
   getMessage: The one from the Ad.
 --- !u!1001 &965176473
 PrefabInstance:
@@ -1051,6 +1051,7 @@ GameObject:
   - component: {fileID: 1555756525}
   - component: {fileID: 1555756524}
   - component: {fileID: 1555756522}
+  - component: {fileID: 1555756523}
   m_Layer: 0
   m_Name: clue3_correctgamecatridge
   m_TagString: rule
@@ -1087,6 +1088,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1555756523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555756521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80403cba8293f544eac93c3a26175da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &1555756524
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1107,7 +1120,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555756521}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1158,7 +1171,7 @@ Transform:
   m_GameObject: {fileID: 1555756521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 22.593002, y: 0.236, z: -22.733}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.64, y: 0.25, z: 0.78}
   m_Children:
   - {fileID: 565954510}
   m_Father: {fileID: 0}

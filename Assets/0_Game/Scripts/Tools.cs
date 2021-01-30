@@ -20,4 +20,9 @@ public class Tools : MonoBehaviour
         GameObject.Destroy(objm);
     }
 
+    public void CursorIdle()
+    {
+        GameGlue.IdleCursor();
+    }
+
 }

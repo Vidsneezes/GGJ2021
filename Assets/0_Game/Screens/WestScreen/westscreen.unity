@@ -533,6 +533,7 @@ GameObject:
   - component: {fileID: 410589435}
   - component: {fileID: 410589434}
   - component: {fileID: 410589433}
+  - component: {fileID: 410589439}
   m_Layer: 0
   m_Name: goto_radio
   m_TagString: rule
@@ -604,7 +605,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410589432}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -655,11 +656,23 @@ Transform:
   m_GameObject: {fileID: 410589432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.76, y: 0.39, z: -0.76}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 0.36, y: 0.45, z: 0.54}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &410589439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410589432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80403cba8293f544eac93c3a26175da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &643094295
 GameObject:
   m_ObjectHideFlags: 0

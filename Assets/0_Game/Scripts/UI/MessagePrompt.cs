@@ -6,10 +6,10 @@ public class MessagePrompt : MonoBehaviour
 {
     public Text textDisplay;
 
-    public void ShowMessage(string text)
+    public void ShowMessage(string text, float waitTime)
     {
         textDisplay.text = text;
-        StartCoroutine(DisplayMessage());
+        StartCoroutine(DisplayMessage(waitTime));
     }
 
     IEnumerator DisplayMessage(float aliveTime = 1f)

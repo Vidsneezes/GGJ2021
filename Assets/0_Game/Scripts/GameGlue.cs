@@ -7,6 +7,10 @@ public class GameGlue : MonoBehaviour
 {
     public int startScene = 99;
 
+    public Texture2D mouseTextureIdle;
+    public Texture2D mouseTextureLook;
+
+
     public GameObject prefab_gameMenu;
     public MessagePrompt prefab_messagePrompt;
 
@@ -22,9 +26,9 @@ public class GameGlue : MonoBehaviour
     private void Awake()
     {
         Screen.SetResolution(480, 270, true);
-
         inputDelay = 0;
         activePair = null;
+        GameGlue.IdleCursor();
         StartCoroutine(StartLoad());
     }
 
@@ -96,6 +100,7 @@ public class GameGlue : MonoBehaviour
             {
                 Debug.Log("match screen");
                 screens[i].gameScreen = screen;
+
                 return;
             }
         }
@@ -127,6 +132,8 @@ public class GameGlue : MonoBehaviour
                 ClosePreviousScreen(prev);
                 screens[i].gameScreen.LookAtScreen();
                 activePair = screens[i];
+                GameGlue.IdleCursor();
+
                 return;
             }
         }
@@ -135,18 +142,37 @@ public class GameGlue : MonoBehaviour
         //currentScreen.ChangeCustom(prev);
     }
 
-    public void ShowMessage(string message)
+    public void ShowMessage(string message, float waitTime = 1)
     {
         MessagePrompt mp = GameObject.Instantiate(prefab_messagePrompt);
-        mp.ShowMessage(message);
+        mp.ShowMessage(message,waitTime);
     }
    
-    public static void TryShowMessage(string message)
+    public static void TryShowMessage(string message, float waitTime = 1)
     {
         GameGlue gameGlue = GameObject.FindObjectOfType<GameGlue>();
         if (gameGlue != null)
         {
-            gameGlue.ShowMessage(message);
+            gameGlue.ShowMessage(message, waitTime);
+        }
+    }
+
+    public static void IdleCursor()
+    {
+        GameGlue gameGlue = GameObject.FindObjectOfType<GameGlue>();
+        if (gameGlue != null)
+        {
+            Cursor.SetCursor(gameGlue.mouseTextureIdle, new Vector2(524, 524), CursorMode.Auto);
+        }
+
+    }
+
+    public static void LookCursor()
+    {
+        GameGlue gameGlue = GameObject.FindObjectOfType<GameGlue>();
+        if (gameGlue != null)
+        {
+            Cursor.SetCursor(gameGlue.mouseTextureLook, new Vector2(524, 524), CursorMode.Auto);
         }
     }
 }
