@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refVariable: {fileID: 11400000, guid: 17bb93969b801da48b027c97e2971256, type: 2}
-  value: 7
+  value: 9
   getMessage: 
 --- !u!65 &877815326
 BoxCollider:
@@ -1904,7 +1904,7 @@ MonoBehaviour:
   onConditionFailed:
     m_PersistentCalls:
       m_Calls: []
-  autoStart: 1
+  autoStart: 0
 --- !u!1 &1832731482
 GameObject:
   m_ObjectHideFlags: 0
