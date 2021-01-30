@@ -18,16 +18,16 @@ public class VarAnim : MonoBehaviour
 
     public void PlayAnim2()
     {
-        animator.Play("1");
+        animator.Play("2");
     }
 
     public void PlayAnim3()
     {
-        animator.Play("1");
+        animator.Play("3");
     }
 
     public void PlayAnim4()
     {
-        animator.Play("1");
+        animator.Play("4");
     }
 }
