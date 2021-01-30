@@ -7,7 +7,9 @@ public class GameGlue : MonoBehaviour
 {
     public int startScene = 99;
 
+    public GameObject prefab_gameMenu;
     public MessagePrompt prefab_messagePrompt;
+
     public GameVariable currentScreen;
     public GameVariable canMove;
 
@@ -15,7 +17,7 @@ public class GameGlue : MonoBehaviour
     [HideInInspector]
     public ScreenPair activePair;
 
-
+    GameObject gameMenu;
     float inputDelay;
     private void Awake()
     {
@@ -48,6 +50,16 @@ public class GameGlue : MonoBehaviour
 
     private void Update()
     {
+        bool toggleMenu = (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+
+        if (gameMenu == null && toggleMenu)
+        {
+            gameMenu = GameObject.Instantiate(prefab_gameMenu);
+        }else if(gameMenu != null && toggleMenu)
+        {
+            GameObject.Destroy(gameMenu);
+        }
+
         if (GameVarDictionary.dictionaryInstance != null)
         {
             GameVarDictionary.dictionaryInstance.DebugMenu();
