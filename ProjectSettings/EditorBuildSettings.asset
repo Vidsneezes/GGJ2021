@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/0_Game/Screens/EastScreen_Telephone/eastscreen_telephone.unity
     guid: 40619964749a30f4ba5e7355b558b65a
+  - enabled: 1
+    path: Assets/0_Game/Scenes/TitleScreen.unity
+    guid: dffad63e9f8af224d906732430dae042
   m_configObjects: {}
