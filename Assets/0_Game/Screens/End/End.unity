@@ -345,10 +345,10 @@ MonoBehaviour:
   onTimerTock:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1091691747}
-        m_TargetAssemblyTypeName: Tools, Assembly-CSharp
-        m_MethodName: SwitchScene
-        m_Mode: 5
+      - m_Target: {fileID: 1051234212}
+        m_TargetAssemblyTypeName: ToggleGameVariable, Assembly-CSharp
+        m_MethodName: ChangeState
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -402,6 +402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refVariable: {fileID: 11400000, guid: b9cf03b7bdd76334883c8b1c0f9d6312, type: 2}
   failedMessage: No Message
+  failMessageTime: 0
   conditionNeed: 1
   onConditionMet:
     m_PersistentCalls:
@@ -471,7 +472,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 216.616, y: 84.6968}
+  m_SizeDelta: {x: 439.7, y: 84.6968}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &594338214
 MonoBehaviour:
@@ -495,10 +496,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -506,9 +507,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[End]
+  m_Text: 'All right! Time to find that next adventure!
 
-    [You found the game outside, one day will all go back outside.]'
+    End.'
 --- !u!222 &594338215
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -710,6 +711,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 3.26, y: 90, z: 0}
+--- !u!1 &1051234211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1051234213}
+  - component: {fileID: 1051234212}
+  m_Layer: 0
+  m_Name: currentscreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1051234212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051234211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf07d162875bd3499924dce06112e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refVariable: {fileID: 11400000, guid: 17bb93969b801da48b027c97e2971256, type: 2}
+  value: 101
+  getMessage: 
+  messageWait: 1
+--- !u!4 &1051234213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051234211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 169.74918, y: 103.08147, z: -17.679304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1091691746
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,6 +913,7 @@ MonoBehaviour:
   refVariable: {fileID: 11400000, guid: 17bb93969b801da48b027c97e2971256, type: 2}
   value: 0
   getMessage: 
+  messageWait: 1
 --- !u!114 &1165107733
 MonoBehaviour:
   m_ObjectHideFlags: 0

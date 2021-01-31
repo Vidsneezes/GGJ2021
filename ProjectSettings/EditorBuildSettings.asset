@@ -21,8 +21,14 @@ EditorBuildSettings:
     path: Assets/0_Game/Screens/NorthScreen/northscreen.unity
     guid: 89afaef0f9cf0d24693ef59025d45890
   - enabled: 1
+    path: Assets/0_Game/Screens/Credits/Credits.unity
+    guid: 44491f126a5b3ef409ef0a381e9b94b9
+  - enabled: 1
     path: Assets/0_Game/Screens/EastScreen_door/eastscreen_door.unity
     guid: c942766fb00a02948b4a08a12094debf
+  - enabled: 1
+    path: Assets/0_Game/Screens/End2/End2.unity
+    guid: b43c4b9983552f346b0bdf1adf38dd13
   - enabled: 1
     path: Assets/0_Game/Screens/EastScreen_gamebox/eastscreen_gamebox.unity
     guid: 8a887df0a72ef0e48bae714a14f13689

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameGlue : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class GameGlue : MonoBehaviour
 
     public GameVariable currentScreen;
     public GameVariable canMove;
+    public Button rightButton;
+    public Button leftButton;
 
     public List<ScreenPair> screens;
     [HideInInspector]
@@ -25,22 +28,28 @@ public class GameGlue : MonoBehaviour
     float inputDelay;
     private void Awake()
     {
-        Screen.SetResolution(480, 270, true);
+        Screen.SetResolution(1280, 720, true);
         inputDelay = 0;
         activePair = null;
         GameGlue.IdleCursor();
         StartCoroutine(StartLoad());
     }
 
+
     IEnumerator StartLoad()
     {
         LoadGame();
         yield return new WaitForSeconds(5f/60f);
 
+        rightButton.onClick.AddListener(ToRight);
+        leftButton.onClick.AddListener(ToLeft);
+
         currentScreen.onStateChange = new CallbackInt();
         currentScreen.onStateChange.AddListener(LookAtScreen);
+        canMove.onStateChange = new CallbackInt();
+        canMove.onStateChange.AddListener(OnCanMove);
 
-        canMove.ChangeCustom(1);
+        canMove.ChangeCustom(0);
         currentScreen.ChangeCustom(startScene);
     }
 
@@ -71,23 +80,29 @@ public class GameGlue : MonoBehaviour
 
         inputDelay = Mathf.Clamp(inputDelay - Time.deltaTime, -1,99);
 
+    }
+
+    public void ToRight()
+    {
         if (canMove.GetState() == 1 && inputDelay < 0)
         {
-            if (Input.GetKeyDown(KeyCode.D))
+            if (activePair.gameScreen.rightScreenNumber >= 0)
             {
-                if (activePair.gameScreen.rightScreenNumber >= 0)
-                {
-                    inputDelay = 12f / 60f;
-                    currentScreen.ChangeCustom(activePair.gameScreen.rightScreenNumber);
-                }
+                inputDelay = 12f / 60f;
+                currentScreen.ChangeCustom(activePair.gameScreen.rightScreenNumber);
             }
-            else if (Input.GetKeyDown(KeyCode.A))
+           
+        }
+    }
+
+    public void ToLeft()
+    {
+        if (canMove.GetState() == 1 && inputDelay < 0)
+        {
+            if (activePair.gameScreen.leftScreenNumber >= 0)
             {
-                if (activePair.gameScreen.leftScreenNumber >= 0)
-                {
-                    inputDelay = 12f / 60f;
-                    currentScreen.ChangeCustom(activePair.gameScreen.leftScreenNumber);
-                }
+                inputDelay = 12f / 60f;
+                currentScreen.ChangeCustom(activePair.gameScreen.leftScreenNumber);
             }
         }
     }
@@ -140,6 +155,19 @@ public class GameGlue : MonoBehaviour
 
         Debug.LogWarning("DID NOT FIND SCREEN : " + number);
         //currentScreen.ChangeCustom(prev);
+    }
+
+    public void OnCanMove(int value)
+    {
+        if(value == 0)
+        {
+            leftButton.gameObject.SetActive(false);
+            rightButton.gameObject.SetActive(false);
+        }else if(value == 1)
+        {
+            leftButton.gameObject.SetActive(true);
+            rightButton.gameObject.SetActive(true);
+        }
     }
 
     public void ShowMessage(string message, float waitTime = 1)

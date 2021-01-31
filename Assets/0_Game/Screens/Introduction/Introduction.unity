@@ -161,9 +161,7 @@ MonoBehaviour:
   ruleObjects:
   - {fileID: 679982040}
   - {fileID: 1040211167}
-  - {fileID: 1397490258}
-  - {fileID: 1397490260}
-  - {fileID: 1397490259}
+  - {fileID: 960495948}
   audioLs: {fileID: 0}
 --- !u!4 &232117092
 Transform:
@@ -407,8 +405,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 216.616, y: 84.6968}
+  m_AnchoredPosition: {x: 0, y: 26.9}
+  m_SizeDelta: {x: 580.1, y: 84.6968}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &594338214
 MonoBehaviour:
@@ -432,10 +430,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -443,9 +441,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[Introduction]
-
-    [Missing game trying to find it]'
+  m_Text: There's no school tomorrow, its the perfect day to pull out my gameboy
+    color and play past midnight.
 --- !u!222 &594338215
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -546,6 +543,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 594338213}
+  - {fileID: 1071181315}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -554,6 +552,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &960495948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 960495950}
+  - component: {fileID: 960495949}
+  m_Layer: 0
+  m_Name: canmove_on
+  m_TagString: rule
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &960495949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960495948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf07d162875bd3499924dce06112e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refVariable: {fileID: 11400000, guid: 8fd35810e5e9dea40a2c591206e83061, type: 2}
+  value: 1
+  getMessage: 
+  messageWait: 1
+--- !u!4 &960495950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960495948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 273.58762, y: 222.51532, z: -160.72691}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1040211167
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +692,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 3.26, y: 90, z: 0}
+--- !u!1 &1071181314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1071181315}
+  - component: {fileID: 1071181317}
+  - component: {fileID: 1071181316}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1071181315
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071181314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 679982044}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -41.9}
+  m_SizeDelta: {x: 256, y: 84.6968}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1071181316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071181314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8301887, g: 0.8057406, b: 0.23104309, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 22
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: If only I could find my copy of rokemon red...
+--- !u!222 &1071181317
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071181314}
+  m_CullTransparentMesh: 1
 --- !u!1 &1377336601
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +824,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7400747322185821948, guid: 8140fcc9ad84b194ca21dc5f9df2e0f7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400747322185821948, guid: 8140fcc9ad84b194ca21dc5f9df2e0f7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400747322185821948, guid: 8140fcc9ad84b194ca21dc5f9df2e0f7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 960495949}
+    - target: {fileID: 7400747322185821948, guid: 8140fcc9ad84b194ca21dc5f9df2e0f7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400747322185821948, guid: 8140fcc9ad84b194ca21dc5f9df2e0f7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ChangeState
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400747322185821948, guid: 8140fcc9ad84b194ca21dc5f9df2e0f7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: ToggleGameVariable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400747322185821948, guid: 8140fcc9ad84b194ca21dc5f9df2e0f7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7400747322185821951, guid: 8140fcc9ad84b194ca21dc5f9df2e0f7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -833,16 +985,6 @@ PrefabInstance:
 --- !u!1 &1397490258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7400747323495543417, guid: 8140fcc9ad84b194ca21dc5f9df2e0f7, type: 3}
-  m_PrefabInstance: {fileID: 1397490257}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1397490259 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7400747323642245832, guid: 8140fcc9ad84b194ca21dc5f9df2e0f7, type: 3}
-  m_PrefabInstance: {fileID: 1397490257}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1397490260 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7400747322185821950, guid: 8140fcc9ad84b194ca21dc5f9df2e0f7, type: 3}
   m_PrefabInstance: {fileID: 1397490257}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2067600962

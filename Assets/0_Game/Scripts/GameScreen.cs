@@ -49,6 +49,7 @@ public class GameScreen : MonoBehaviour
             audioLs.enabled = false;
         }
 
+        Debug.Log(sceneName);
         for (int i = 0; i < ruleObjects.Count; i++)
         {
             ruleObjects[i].gameObject.SetActive(false);

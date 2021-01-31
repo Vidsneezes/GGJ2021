@@ -6,6 +6,7 @@ public class CheckGameVariable : MonoBehaviour
 {
     public GameVariable refVariable;
     public string failedMessage;
+    public float failMessageTime = 1f;
 
     public int conditionNeed;
 
@@ -33,7 +34,7 @@ public class CheckGameVariable : MonoBehaviour
             onConditionFailed.Invoke();
             if (failedMessage.Length > 0)
             {
-                GameGlue.TryShowMessage(failedMessage);
+                GameGlue.TryShowMessage(failedMessage, failMessageTime);
             }
         }
     }

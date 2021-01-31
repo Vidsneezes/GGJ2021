@@ -7,9 +7,12 @@ using UnityEngine.UI;
 public class TelephoneUI : MonoBehaviour
 {
     public string magicNumber;
+    public string secretNumber;
     public string currentNumber;
 
     public UnityEvent onCallSuccess;
+    public GameVariable secretEnd;
+
     public UnityEvent onCallFailed;
 
     public Text numberText;
@@ -31,10 +34,13 @@ public class TelephoneUI : MonoBehaviour
 
     public void Call()
     {
-        if(currentNumber == magicNumber)
+        if (currentNumber == magicNumber)
         {
             onCallSuccess.Invoke();
-        }else
+        } else if (currentNumber == secretNumber) {
+            onCallSuccess.Invoke();
+            secretEnd.ChangeCustom(1);
+        } else
         {
             onCallFailed.Invoke();
         }
