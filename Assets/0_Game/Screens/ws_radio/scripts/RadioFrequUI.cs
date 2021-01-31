@@ -36,7 +36,7 @@ public class RadioFrequUI : MonoBehaviour
     {
         mainMixer.SetFloat("radio_volume", -80);
         mainMixer.SetFloat("soundscape_volume", 6);
-        mainMixer.SetFloat("lofi_volume", -15);
+        mainMixer.SetFloat("lofi_volume", -41);
         mainPlayer.Stop();
     }
 

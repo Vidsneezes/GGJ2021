@@ -25,6 +25,12 @@ public class GameGlue : MonoBehaviour
     public ScreenPair activePair;
 
     GameObject gameMenu;
+    public AudioSource leftSwoosh;
+    public AudioSource rightSwoosh;
+
+    public AudioSource thunderSource;
+
+
     float inputDelay;
     private void Awake()
     {
@@ -33,6 +39,19 @@ public class GameGlue : MonoBehaviour
         activePair = null;
         GameGlue.IdleCursor();
         StartCoroutine(StartLoad());
+        StartCoroutine(PlayThunder());
+    }
+
+    IEnumerator PlayThunder()
+    {
+        while(true)
+        {
+            if (Random.Range(1, 500000) == 1)
+            {
+                thunderSource.Play();
+            }
+            yield return new WaitForSeconds(300);
+        }
     }
 
 
@@ -88,6 +107,8 @@ public class GameGlue : MonoBehaviour
         {
             if (activePair.gameScreen.rightScreenNumber >= 0)
             {
+                rightSwoosh.Play();
+
                 inputDelay = 12f / 60f;
                 currentScreen.ChangeCustom(activePair.gameScreen.rightScreenNumber);
             }
@@ -101,6 +122,7 @@ public class GameGlue : MonoBehaviour
         {
             if (activePair.gameScreen.leftScreenNumber >= 0)
             {
+                leftSwoosh.Play();
                 inputDelay = 12f / 60f;
                 currentScreen.ChangeCustom(activePair.gameScreen.leftScreenNumber);
             }
